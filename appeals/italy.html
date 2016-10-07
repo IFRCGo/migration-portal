@@ -47,11 +47,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="https://brcmapsteam.github.io/Europe_response">IFRC Europe Migration Response</a>
+        <a class="navbar-brand" href="../index.html">IFRC Europe Migration Response</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="https://brcmapsteam.github.io/Europe_response">IM Portal</a></li>
+          <li class="active"><a href="../index.html">IM Portal</a></li>
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FedNet Links <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -60,6 +60,17 @@
                         <li><a href="http://www.ifrc.org/en/publications-and-reports/appeals/?ac=&at=0&c=18&co=&dt=1&f=&re=&t=&ti=&zo=SP5">Appeals &amp; Reports</a></li>
                   </ul>
           </li>
+          <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Appeals <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                          <li><a href="croatia.html">Croatia</a></li>
+                          <li><a href="fyrom.html">fYRoM</a></li>
+                          <li><a href="greece.html">Greece</a></li>
+                          <li><a href="hungary.html">Hungary</a></li>
+                          <li><a href="#">Italy</a></li>
+                          <li><a href="serbia.html">Serbia</a></li>
+                    </ul>
+            </li>
           <li><a href="https://www-secure.ifrc.org/DMISII/Pages/00_Home/login.aspx">DMIS</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-md-down">
@@ -70,10 +81,23 @@
   </nav>
 
   <main class="container-fluid">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-md-7 col-sm-12">
       <div id="map"></div>
     </div>
-    <div class="col-md-6 col-sm-12"></div>
+    <div class="col-md-5 col-sm-12">
+      <h1 class="page-header">Italy - Population Movement (MDRIT002)</h1>
+      
+      <div class="row">
+        <div class="col-md-7 col-sm-12">
+          <h2 class="subheading">Updates to Appeal</h2>
+          <div id="itAppeals"></div>
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <h2 class="subheading">Coverage</h2>
+          <div id="itCoverage"></div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
@@ -95,69 +119,11 @@
   </footer>
 
   <script type="text/javascript" src="../js/jquery.min.js"></script>
-  <script src="../js/d3.v3.min.js"></script>
-  <script src="../js/topojson.v1.min.js"></script>
+  <script type="text/javascript" src="../js/d3.v4.min.js"></script>
+  <script type="text/javascript" src="../js/topojson.v1.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/data_connections.js"></script>
-<script>
-/*d3.select(window)
-        .on("resize", sizeChange);*/
+  <script type="text/javascript" src="../js/appeals.js"></script>
 
-// Create a unit projection.
-var projection = d3.geo.equirectangular();
-
-// Create a path generator.
-var path = d3.geo.path()
-    .projection(projection);
-
-var svg = d3.select("div#map")
-   .append("div")
-   .classed("svg-container", true) //container class to make it responsive
-   .append("svg")
-   //responsive SVG needs these 2 attributes and no width and height attr
-   .attr("preserveAspectRatio", "xMinYMin meet")
-   .attr("viewBox", "0 0 475 600")
-   //class to make it responsive
-   .classed("svg-content-responsive", true);
-
-d3.json("../geo/IT.json", function(error, it) {
-    if (error) throw error;
-
-    var width = 500,
-        height = 500;
-
-    console.log(it);
-
-    var country = topojson.feature(it, it.objects.ITA_adm1);
-
-    projection
-        .scale(1)
-        .translate([0, 0]);
-
-    // Compute the bounds of a feature of interest, then derive scale & translate.
-    var b = path.bounds(country),
-        s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
-        t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
-
-    // Update the projection to use computed scale & translate.
-    projection
-        .scale(s)
-        .translate(t);
-
-    svg.append("path")
-        .datum(country)
-        .attr("class", "adm")
-        .attr("d", path);
-
-    svg.append("path")
-        .datum(topojson.mesh(it, it.objects.ITA_adm1, function(a, b) { return a.id !== b.id; }))
-        .attr("class", "adm-border")
-        .attr("d", path);
-});
-
-function sizeChange() {
-      d3.select("g").attr("transform", "scale(" + $("#map").width()/900 + ")");
-      $("svg").height($("#map").width()*0.618);
-}
-
-</script>
+</body>
+</html>

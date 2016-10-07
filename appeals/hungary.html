@@ -47,11 +47,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="https://brcmapsteam.github.io/Europe_response">IFRC Europe Migration Response</a>
+        <a class="navbar-brand" href="../index.html">IFRC Europe Migration Response</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="https://brcmapsteam.github.io/Europe_response">IM Portal</a></li>
+          <li class="active"><a href="../index.html">IM Portal</a></li>
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FedNet Links <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -60,6 +60,17 @@
                         <li><a href="http://www.ifrc.org/en/publications-and-reports/appeals/?ac=&at=0&c=18&co=&dt=1&f=&re=&t=&ti=&zo=SP5">Appeals &amp; Reports</a></li>
                   </ul>
           </li>
+          <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Appeals <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                          <li><a href="croatia.html">Croatia</a></li>
+                          <li><a href="fyrom.html">fYRoM</a></li>
+                          <li><a href="greece.html">Greece</a></li>
+                          <li><a href="#">Hungary</a></li>
+                          <li><a href="italy.html">Italy</a></li>
+                          <li><a href="serbia.html">Serbia</a></li>
+                    </ul>
+            </li>
           <li><a href="https://www-secure.ifrc.org/DMISII/Pages/00_Home/login.aspx">DMIS</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right hidden-md-down">
@@ -73,7 +84,9 @@
     <div class="col-md-6 col-sm-12">
       <div id="map"></div>
     </div>
-    <div class="col-md-6 col-sm-12"></div>
+    <div class="col-md-6 col-sm-12">
+      <h1>Hungary - Population Movement (MDRHU004)</h1>
+    </div>
   </main>
 
   <footer class="footer">
@@ -95,8 +108,8 @@
   </footer>
 
   <script type="text/javascript" src="../js/jquery.min.js"></script>
-  <script src="../js/d3.v3.min.js"></script>
-  <script src="../js/topojson.v1.min.js"></script>
+  <script type="text/javascript" src="../js/d3.v4.min.js"></script>
+  <script type="text/javascript" src="../js/topojson.v1.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../js/data_connections.js"></script>
 <script>
@@ -104,10 +117,10 @@
         .on("resize", sizeChange);*/
 
 // Create a unit projection.
-var projection = d3.geo.equirectangular();
+var projection = d3.geoEquirectangular();
 
 // Create a path generator.
-var path = d3.geo.path()
+var path = d3.geoPath()
     .projection(projection);
 
 var svg = d3.select("div#map")

@@ -19,32 +19,30 @@
 */
 
  #social-youtube {
-     color: #d34836;
+     color: #B71C1C;
  }
  #social-youtube:hover {
-     color: #d34836;
+     color: #B71C1C;
  }
  #social-tw {
-     color: #d34836;
+     color: #B71C1C;
  }
  #social-tw:hover {
      color: #4099FF;
  }
  #social-medium {
-     color: #d34836;
+     color: #B71C1C;
  }
  #social-medium:hover {
      color: #3B5998;
  }
  #social-em {
-     color: #d34836;
+     color: #B71C1C;
  }
  #social-em:hover {
      color: #f39c12;
  }
 
-
-
- #social {
+#social {
      padding-top: 10px;
- }
+}
