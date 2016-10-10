@@ -1,6 +1,37 @@
 
 function generateMaps(loc) {
 
+    var itLocs = [];
+        grLocs = [];
+        huLocs = [];
+        hrLocs = [];
+        mkLocs = [];
+        rsLocs = [];
+
+    // Push locations to separate arrays by country
+    for(var i = 0; i < loc.length; i++) {
+
+        switch(loc[i]["#iso"]) {
+            case "ITA":
+                itLocs.push(loc[i]);
+                break;
+            case "GRC":
+                grLocs.push(loc[i]);
+                break;
+            case "HRV":
+                hrLocs.push(loc[i]);
+                break;
+            case "HUN":
+                huLocs.push(loc[i]);
+                break;
+            case "MKD":
+                itLocs.push(loc[i]);
+                break;
+            default:
+                break;
+        }
+    }
+
   //var countryArray = [hr,mk,gr,hu,it,rs];
 
   // Create a unit projection.
@@ -55,7 +86,7 @@ function generateMaps(loc) {
           .attr("d", path);
 
       svg.selectAll("circle")
-           .data(loc)
+           .data(itLocs)
            .enter()
            .append("circle")
            .attr("cx", function(d) {
