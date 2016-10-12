@@ -65,17 +65,17 @@
                           <li><a href="http://www.ifrc.org/en/publications-and-reports/appeals/?ac=&at=0&c=18&co=&dt=1&f=&re=&t=&ti=&zo=SP5">Appeals &amp; Reports</a></li>
                     </ul>
             </li>
-            <li class="dropdown">
+            <!--<li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Appeals <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                          <li><a href="appeals/croatia.html">Croatia</a></li>
-                          <li><a href="appeals/fyrom.html">fYRoM</a></li>
-                          <li><a href="appeals/greece.html">Greece</a></li>
-                          <li><a href="appeals/hungary.html">Hungary</a></li>
-                          <li><a href="appeals/italy.html">Italy</a></li>
-                          <li><a href="appeals/serbia.html">Serbia</a></li>
+                          <li><a id="hr-app" href="#">Croatia</a></li>
+                          <li><a id="mk-app" href="#">fYRoM</a></li>
+                          <li><a id="gr-app" href="#">Greece</a></li>
+                          <li><a id="hu-app" href="#">Hungary</a></li>
+                          <li><a id="it-app" href="#">Italy</a></li>
+                          <li><a id="rs-app" href="#">Serbia</a></li>
                     </ul>
-            </li>
+            </li>-->
             <li><a href="https://www-secure.ifrc.org/DMISII/Pages/00_Home/login.aspx">DMIS</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right hidden-md-down">
@@ -86,10 +86,76 @@
     </nav>
 
     <!-- Begin page content -->
-    <main class="container-fluid">
+    <main class="container">
       <div class="page-header">
         <h1>IM Portal</h1>
         <h2>Information on the Red Cross Red Crescent Response to Migration in Europe</h2>
+        <h3 id="byline">Some resources are behind a password. If you are RCRC staff and require access, <a href="mailto:im.migration@ifrc.org?subject=IM_Europe-resources-online-feedback">contact the IFRC Europe IM delegates</a>.</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+            <a href="http://brcmapsteam.github.io/Europe_migrants_sitrep/" class="button icon pos">
+                <span>Response Indicator Dashboard</span>
+            </a> 
+        </div>
+        <div class="col-sm-4">
+            <a href="https://www.dropbox.com/sh/kl8q2qnq59s5esw/AAAE2uYf8bHfRskZy93-EAOaa?dl=0" class="button icon pos">
+                <span>Contact Lists</span>
+            </a> 
+        </div>
+        <div class="col-sm-4">
+            <a href="http://brcmapsteam.github.io/topaz_responder/" class="button icon pos">
+                <span>Mediterranean Search and Rescue Dashboard</span>
+            </a> 
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-4">
+              <a href="http://brcmapsteam.github.io/europe-15-situational-awareness/" class="button icon pos">
+                  <span>Situation Overview Dashboard</span>
+              </a> 
+          </div>
+          <div class="col-sm-4">
+              <a href="http://brcmapsteam.github.io/Europe_response/map_link.html" class="button icon pos">
+                  <span>Interactive Maps</span>
+              </a> 
+          </div>
+          <div class="col-sm-4">
+              <a href="https://www.dropbox.com/sh/unhdndhpc3j5p17/AAB6orC-NWAjJbziCc2Z3qbma?dl=0" target="_blank" class="button icon pos">
+                  <span>Operations and Deployment Maps</span>
+              </a>
+          </div>           
+      </div>
+      
+      <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-4">
+              <a href="http://brcmapsteam.github.io/europe-15-situational-awareness/forecasting.html" class="button icon pos">
+                  <span>Migrant Arrivals Forecasting</span>
+              </a> 
+          </div>
+          <div class="col-sm-4">
+              <a href="https://www.dropbox.com/sh/4kixu87tnblyv82/AAAJjsFJYlzeGf_1u7_JxYc2a?dl=0" target="_blank" class="button icon pos">
+                  <span>Weekly Response Indicator Maps</span>
+              </a>
+          </div>
+          <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+      <div class="col-sm-2"></div>
+          <div class="col-sm-4">
+              <a href="https://www.dropbox.com/sh/97zlo0llrjvwqky/AAC-iGGE6DwJ8q0s41XqFA7pa?dl=0" target="_blank" class="button text-center">
+                  <span>External Actor Maps / Data</span>
+              </a>
+          </div>
+          <div class="col-sm-4">
+              <a href="https://www.dropbox.com/sh/50gnzapsivc47il/AADbv45TrC2cj5cIMQ8CtFJpa?dl=0" target="_blank" class="button text-center">
+                  <span>Basemaps / General Infrastructure Maps</span>
+              </a>
+          </div>
+          <div class="col-sm-2"></div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -112,9 +178,7 @@
 
     <!-- JavaScript Libraries -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/d3.v4.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/data_connections.js"></script>
 
 </body>
 </html>

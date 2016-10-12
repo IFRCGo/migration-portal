@@ -28,7 +28,7 @@ body {
   color: #B71C1C;
 }
 
-body > .container-fluid {
+body > .container {
   padding: 50px 15px 0;
 }
 .container-fluid .text-muted {
@@ -45,16 +45,15 @@ body > .container-fluid {
 }
 
 .right {
-    float: right;
+  float: right;
 }
 
 .btn {
-    background: #e60000;  /* button colour */
-    color: #ffffff;       /* text colour */
-    border: #e60000;
-    font-weight: bold;
-    font-size: 13px;
-    
+  background: #e60000;  /* button colour */
+  color: #ffffff;       /* text colour */
+  border: #e60000;
+  font-weight: bold;
+  font-size: 13px;  
 }
 
 /* Template style for SIMS products */
@@ -67,6 +66,13 @@ h2 { font-size: 1.5em; margin-top:0px;}
 
 /* H3 Headings */
 h3 { font-size: 1.25em; font-weight: bold; }
+
+#byline {
+  text-align: center;
+  font-size: .8em;
+  font-weight: normal;
+  margin-top: 5px;
+}
 
 h4 { text-align: center; }
 
@@ -104,9 +110,6 @@ li { list-style-type: none; }
 .stats { font-weight: bold; color: #B71C1C; float: right; padding-top: 10px; }
 
 .img-center { margin:0 auto; border-radius:10px; }
-
-.icon { height: 40px; }
-
 
 .button {
     background-image: -webkit-linear-gradient(#e60000, #800000);
@@ -185,7 +188,7 @@ li { list-style-type: none; }
 }
 
 .button.icon.pos span {
-    background-position: 200px 90px;     /* x,y- position it in the button   210px 90px */
+    background-position: 200px 95px;     /* x,y- position it in the button   210px 90px */
     background-size: 80px, 50px;
 }
 
